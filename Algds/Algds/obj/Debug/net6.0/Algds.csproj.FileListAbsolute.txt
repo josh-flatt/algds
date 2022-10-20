@@ -1,0 +1,15 @@
+C:\Repositories\sdi\algds\Algds\Algds\bin\Debug\net6.0\Algds.exe
+C:\Repositories\sdi\algds\Algds\Algds\bin\Debug\net6.0\Algds.deps.json
+C:\Repositories\sdi\algds\Algds\Algds\bin\Debug\net6.0\Algds.runtimeconfig.json
+C:\Repositories\sdi\algds\Algds\Algds\bin\Debug\net6.0\Algds.dll
+C:\Repositories\sdi\algds\Algds\Algds\bin\Debug\net6.0\Algds.pdb
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.csproj.AssemblyReference.cache
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.AssemblyInfoInputs.cache
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.AssemblyInfo.cs
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.csproj.CoreCompileInputs.cache
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.dll
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\refint\Algds.dll
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.pdb
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\Algds.genruntimeconfig.cache
+C:\Repositories\sdi\algds\Algds\Algds\obj\Debug\net6.0\ref\Algds.dll
