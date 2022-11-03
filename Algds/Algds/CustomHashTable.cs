@@ -14,6 +14,7 @@ namespace Algds
     public class CustomHashTable
     {
         private HashNode[] arr;
+        private HashNode deletedHashNode = new HashNode();
         public int Size { get; private set; }
 
         public CustomHashTable(int capacity)
@@ -26,26 +27,51 @@ namespace Algds
             return (key + probeDepth) % arr.Length;
         }
 
-        public void Insert(int key, int val)
+        private int FindHashIndex(int key, bool findNextEmpty = false)
         {
             int hashIndex = this.Hash(key, 0);
-            int probeDepth = 0;
-            while (arr[hashIndex] != null && arr[hashIndex].Key != key)
+            int probeDepth = 1;
+            while (arr[hashIndex] != null)
             {
+                if (arr[hashIndex].Key == key && arr[hashIndex] != deletedHashNode)
+                {
+                    if (findNextEmpty) { return this.Hash(hashIndex, probeDepth + 1); }
+                    return hashIndex;
+                }
                 hashIndex = this.Hash(hashIndex, probeDepth);
                 probeDepth++;
             }
+            return findNextEmpty ? hashIndex : -1;
+        }
+
+        public void Insert(int key, int val)
+        {
+            int hashIndex = FindHashIndex(key, true);
             arr[hashIndex] = new HashNode() { Key = key, Val = val };
         }
 
-        public int DeleteKey(int key)
+        public bool DeleteKey(int key)
         {
-            throw new NotImplementedException();
+            int hashIndex = FindHashIndex(key);
+            if (hashIndex == -1) { return false; }
+            arr[hashIndex] = this.deletedHashNode;
+            return true;
+        }
+
+        public int PopKey(int key)
+        {
+            int hashIndex = FindHashIndex(key);
+            if (hashIndex == -1) { throw new KeyNotFoundException(); }
+            int value = arr[hashIndex].Val;
+            arr[hashIndex] = this.deletedHashNode;
+            return value;
         }
 
         public int Find(int key)
         {
-            throw new NotImplementedException();
+            int hashIndex = FindHashIndex(key);
+            if (hashIndex == -1) { throw new KeyNotFoundException(); }
+            return arr[hashIndex].Val;
         }
     }
 }
